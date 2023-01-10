@@ -173,3 +173,11 @@ For question on products, please use [Tyk Community forum](https://community.tyk
 Clients can also use support@tyk.io.
 
 Potential clients and evaluators, please use info@tyk.io.
+
+
+## My API
+
+```bash
+curl 
+
+```

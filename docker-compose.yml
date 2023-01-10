@@ -4,8 +4,9 @@ services:
     image: docker.tyk.io/tyk-gateway/tyk-gateway:v4.1.0
     ports:
       - 8080:8080
-    networks:
-      - tyk
+    # networks:
+    #   - tyk
+    network_mode: host
     volumes:
       - ./tyk.standalone.conf:/opt/tyk-gateway/tyk.conf
       - ./apps:/opt/tyk-gateway/apps
@@ -17,10 +18,11 @@ services:
       - tyk-redis
   tyk-redis:
     image: redis:6.2.7-alpine
-    networks:
-      - tyk
+    # networks:
+    #   - tyk
+    network_mode: host
     ports:
       - 6379:6379
 
-networks:
-  tyk:
+# networks:
+#   tyk:
